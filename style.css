@@ -1,0 +1,390 @@
+/* Reset gaya bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Warna dasar website */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header dan Navigasi */
+header {
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* ============ HERO SECTION (HOME) ============ */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    padding: 0 10%;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Konten dalam Hero */
+.hero-content {
+    max-width: 50%;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+hero-content h1 span {
+    color: #ffcc00;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+    border-color: #ffcc00;
+}
+
+/* Tombol Tentang Saya */
+.btn-tentang {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-tentang:hover {
+    background: white;
+    color: #333;
+    border-color: white;
+}
+
+/* Gambar Profil */
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid white;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+/* ============ ANIMASI ============ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============ RESPONSIF ============ */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* ============ ABOUT ME ============ */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50%;
+    max-width: 400px;
+    transition: 0.3s;
+    animation: fadeInScale 1.5s ease-in-out;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+.about-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #007bff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ============ RESPONSIF ============ */
+@media (max-width: 768px) {
+    .about-card {
+        width: 80%;
+    }
+}
+
+/* ============ KONTAK ============ */
+.contact-container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Efek input saat diketik */
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Tombol Kirim */
+.contact-container button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============ RESPONSIF ============ */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 80%;
+    }
+}
+
+/* ============ PEMROGRAMAN WEB ============ */
+.programming-container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.programming-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.programming-container h2 {
+    color: #0056b3;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* Tampilan Kode */
+.programming-container pre {
+    background: #2d2d2d;
+    color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow-x: auto;
+    transition: 0.3s;
+}
+
+/* Efek Hover */
+.programming-container pre:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============ RESPONSIF ============ */
+@media (max-width: 768px) {
+    .programming-container {
+        width: 90%;
+    }
+}
+
+/* ============ RESPONSIF ============ */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-card {
+        width: 80%;
+    }
+
+    .contact-container {
+        width: 80%;
+    }
+
+    .programming-container {
+        width: 90%;
+    }
+}
